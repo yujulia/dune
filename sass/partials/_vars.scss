@@ -1,0 +1,44 @@
+// ----------------------------------------------- font weights
+
+$xlight: 100;
+$light: 300;
+$regular: 400;
+$book: 500;
+$semibold: 600;
+$bold: 700;
+
+$font-cap: code, verdana, sans-serif;
+$font-title: arial, verdana, sans-serif;
+$font-body: verdana, sans-serif;
+
+// ----------------------------------------------- colors
+
+$color-text: #aaaaaa;
+$color-main-header: #dddddd;
+$color-header: #ffccdd;
+
+$color-link: #ff9900;
+$color-hover: #01383f;
+$color-bg: #000;
+
+// ----------------------------------------------- 
+
+
+// ----------------------------------------------- extendables
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+        
+%nofrill {
+    margin: 0; /* test */
+    padding: 0; 
+}
+
+
+
+
+    
