@@ -368,11 +368,89 @@ ol, ul {
 
 img {
   display: block;
+  width: 100%;
 }
 
 :focus {
   outline: none;
   border-bottom: solid 3px #ff9900;
+}
+
+[class^=cc-]:before,
+[class*=" cc-"]:before,
+[class^=cc-]:after,
+[class*=" cc-"]:after, [data-icon]:before {
+  font-family: "social_media_circledregular" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: middle;
+  font-size: 1.2em;
+  color: #fff;
+  padding-right: 0.1em;
+}
+
+@font-face {
+  font-family: "social_media_circledregular";
+  src: url("../fonts/social_media_circled-webfont.woff2") format("woff2"), url("../social_media_circled-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+[data-icon]:before {
+  content: attr(data-icon);
+}
+
+.cc-email:before {
+  content: "k";
+}
+
+.cc-web:before {
+  content: "K";
+}
+
+.cc-github:before {
+  content: ")";
+}
+
+.cc-instagram:before {
+  content: "Q";
+}
+
+.cc-youtube:before {
+  content: "M";
+}
+
+.cc-twitter:before {
+  content: "D";
+}
+
+.cc-twitch:before {
+  content: "a";
+}
+
+.cc-patreon:before {
+  content: "A";
+}
+
+.cc-paypal:before {
+  content: "Z";
+}
+
+.cc-venmo:before {
+  content: "B";
+}
+
+.cc-amazon:before {
+  content: "T";
+}
+
+.cc-box:before {
+  content: "3";
 }
 
 body {
@@ -385,7 +463,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #ff9900;
+  color: #fff;
 }
 
 a:hover {
@@ -402,15 +480,17 @@ p {
 header {
   display: block;
   width: 80%;
-  margin: 2em auto;
+  margin: 0 auto;
   overflow: hidden;
-  padding-bottom: 5em;
+  padding: 3em 0;
 }
 
 h1 {
   font-family: verdana, sans-serif;
-  color: #e3d44b;
+  color: #fff;
+  font-size: 1.4vw;
   top: -50px;
+  text-shadow: 2px 2px #000;
 }
 
 h1 span {
@@ -420,8 +500,35 @@ h1 span {
   overflow: hidden;
 }
 
-img {
+.social li {
+  font-size: 1em;
+  display: inline-block;
+  color: #fff;
+  padding-right: 0.5em;
+  font-weight: lighter;
+}
+
+.blurb {
+  background-color: #ea5436;
+  margin: 0 0 10em 0;
+  padding: 6em 1em;
   width: 100%;
+}
+
+.blurb blockquote {
+  color: #e3d44b;
+  width: 80%;
+  margin: 0 auto 2em auto;
+  font-size: 2vw;
+  line-height: 1.6em;
+  text-shadow: 2px 2px #000;
+}
+
+.blurb p {
+  width: 80%;
+  margin: 0 auto 1em auto;
+  font-size: 1.2vw;
+  line-height: 1.6em;
 }
 
 .all {
@@ -467,7 +574,7 @@ img {
 }
 
 .white-fill {
-  background-color: #fff;
+  background-color: #e3d44b;
   width: 50%;
   height: 100%;
   position: absolute;
@@ -520,10 +627,11 @@ img {
   height: 10%;
   background-color: #fff;
   overflow: hidden;
-  padding: 6em 2em;
+  padding: 0em 2em 5em 2em;
 }
 
 .image-group {
+  padding-top: 5em;
   overflow: hidden;
 }
 

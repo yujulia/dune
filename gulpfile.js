@@ -48,31 +48,6 @@ function scripts() {
 		.pipe(dest('deploy/'));
 }
 
-
-
-function old() {
-	console.log("Scripts...");
-	// var rellaxStream = src('node_modules/rellax/rellax.js')
-
-	// return browserify(options)
-	// 	.bundle()
-	// 	.on('error', log.error.bind(log, 'Browserify Error'))
-	// 	.pipe(source('browindex.js'))
-	// 	.pipe(merge(rellaxStream))
-	// 	.pipe(concat('bundle.js'))
-	// 	.pipe(dest('deploy/'));
-
-	// var jsStream = src('js/**/*.js')
-	// var scrollStream = src('node_modules/rellax/rellax.js')
-	// // return merge(locoStream, jsStream)
-
-	// return merge(scrollStream, jsStream)
-	// 	.pipe(concat('bundle.js'))
-	//     // .pipe(babel())
-	//     // .pipe(uglify())
-	//     .pipe(dest('deploy/'));
-}
-
 /** -------------------------------------------------------- 
  * who watches the watcher
 */

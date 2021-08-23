@@ -19,6 +19,7 @@ ol, ul {
 
 img {
     display: block;
+    width: 100%;
 }
 
 :focus {
@@ -26,7 +27,95 @@ img {
     border-bottom: solid 3px $color-link;
 }
 
-// --------------------------------
+// -------------------------------- fonts
+
+%beforeSocial {
+    font-family: "social_media_circledregular" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: middle;
+    font-size: 1.2em;
+    color: #fff;
+    padding-right: 0.1em;
+}
+
+@font-face {
+    font-family: 'social_media_circledregular';
+    src: url('../fonts/social_media_circled-webfont.woff2') format('woff2'),
+         url('../social_media_circled-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+[data-icon]:before {
+  content: attr(data-icon);
+  @extend %beforeSocial;
+}
+
+[class^="cc-"]:before,
+[class*=" cc-"]:before,
+[class^="cc-"]:after,
+[class*=" cc-"]:after  {
+  @extend %beforeSocial;
+}
+
+.cc-email:before {
+  content: "k";
+}
+
+.cc-web:before {
+  content: "K";
+}
+
+.cc-github:before {
+  content: ")";
+}
+
+.cc-instagram:before {
+  content: "Q";
+}
+
+.cc-youtube:before {
+  content: "M";
+}
+
+.cc-twitter:before {
+  content: "D";
+}
+
+.cc-twitch:before {
+  content: "a";
+}
+
+.cc-patreon:before {
+  content: "A";
+}
+
+.cc-paypal:before {
+    content: "Z";
+}
+
+.cc-venmo:before {
+    content: "B";
+}
+
+.cc-amazon:before {
+    content: "T";
+}
+
+.cc-box:before {
+    content: "3";
+}
+
+
+// -------------------------------- generic
 
 body {
     color: $color-text;
@@ -38,7 +127,7 @@ body {
 
 a {
     text-decoration: none;
-    color: $color-link;
+    color: #fff;
 }
 
 a:hover {
@@ -52,20 +141,22 @@ p {
     line-height: 1.6em;
 }
 
-// --------------------------------
+// -------------------------------- header
 
 header {
     display: block;
     width: 80%;
-    margin: 2em auto;
+    margin: 0 auto;
     overflow: hidden;
-    padding-bottom: 5em;
+    padding: 3em 0;
 }
 
 h1 {
     font-family: $font-title;
-    color: $color-header;
+    color: #fff;
+    font-size: 1.4vw;
     top: -50px;
+    text-shadow: 2px 2px #000;
 }
 
 h1 span {
@@ -75,9 +166,41 @@ h1 span {
     overflow: hidden;
 }
 
-img {
-    width: 100%;
+.social li {
+    font-size: 1em;
+    display: inline-block;
+    color:  #fff;
+    padding-right: 0.5em;
+    font-weight: lighter;
 }
+
+
+// -------------------------------- blurb
+
+.blurb {
+    background-color: $color-bg;
+    margin: 0 0 10em 0;
+    padding: 6em 1em;
+    width:  100%;
+}
+
+.blurb blockquote {
+    color: $color-header;
+    width:  80%;
+    margin: 0 auto 2em auto;
+    font-size: 2vw;
+    line-height: 1.6em;
+    text-shadow: 2px 2px #000;
+}
+
+.blurb p {
+    width:  80%;
+    margin: 0 auto 1em auto;
+    font-size: 1.2vw;
+    line-height: 1.6em;
+}
+
+// -------------------------------- all
 
 .all {
     display: block;
@@ -126,7 +249,7 @@ img {
 // -------------------------------- white fill for room 1
 
 .white-fill {
-    background-color: #fff;
+    background-color: #e3d44b;
     width: 50%;
     height:  100%;
     position: absolute;
@@ -183,10 +306,11 @@ img {
     height: 10%;
     background-color: #fff;
     overflow: hidden;
-    padding: 6em 2em;
+    padding: 0em 2em 5em 2em;
 }
 
 .image-group {
+    padding-top: 5em;
     overflow: hidden;
 }
 
