@@ -31,7 +31,7 @@ img {
 body {
     color: $color-text;
     font-family: $font-body;
-    font-weight: $light;
+    font-weight: $semibold;
     font-size: 1em;
     background: url(../img/sky.png) fixed;
 }
@@ -46,7 +46,9 @@ a:hover {
 }
 
 p {
-    font-size: 1em;
+    color: $color-text;
+    font-size: 1.6vw;
+    font-weight: bold;
     line-height: 1.6em;
 }
 
@@ -83,27 +85,166 @@ img {
     overflow: hidden;
     width: 100%;
 }
+ 
+// -------------------------------- white fill for room 1
+
+.white-fill {
+    background-color: #fff;
+    width: 50%;
+    height:  100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+}
+
+.white-fill p {
+    margin: 0 auto;
+    display: block;
+    padding: 8em 0 0 5em;
+    font-size: 2vw;
+}
+
+// -------------------------------- moon styles
 
 .moon {
     position: absolute;
     width: 8%;
     z-index: 1;
-}
-
-.moon-0 {
     top: 12em;
     right: 20em;
 }
 
-.moon-2 {
+.room-2 .moon {
     top: 6em;
+}
+
+.room-3 .moon {
+    right: 28em;
+    width: 10%;
+}
+
+.room-5 .moon {
+    top: 6em;
+    right: 32em;
+    width: 12%;
+}
+
+.room-6 .moon {
+    top: 1em;
+    right: 25em;
+}
+
+.room-7 .moon {
+    top: 5em;
     right: 20em;
 }
+
+// -------------------------------- white bg styles
 
 .white-bg {
     height: 10%;
     background-color: #fff;
-    overflow: hidden
+    overflow: hidden;
+    padding: 12em 2em;
+}
+
+.image-group {
+    overflow: hidden;
+}
+
+.image-group .left {
+    float:  left;
+}
+
+.image-group .right {
+    float:  right;
+}
+
+.gray-cell {
+    width: 50%;
+}
+
+.gray-cell img {
+    float: none;
+    width: 80%;
+    float: none;
+    margin: 0 auto;
+}
+
+.text-group p {
+    width:  45%;
+    float:  left;
+    padding-left: 3em;
+}
+
+.text-group p:nth-child(2) {
+    float:  right;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+// -------------------------------- text bubble
+
+.bubble {
+    position:  absolute;
+    z-index: 5;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+}
+
+.bubble-top-left {
+    background-image: url('../img/bubble-top.png');
+    padding: 1em 3em 4em 5em;
+    top: -1.4em;
+    left: -1.6em;
+}
+
+.bubble-bottom-left {
+    background-image: url('../img/bubble-bottom.png');
+    padding: 0 2em 0 3em;
+    bottom:  -0.2em;
+    left:  -2em;
+}
+
+.bubble-top-right {
+    background-image: url('../img/bubble-top.png');
+    padding: 1em 2em 4em 3em;
+    top: -1.4em;
+    right: -1.6em;
+}
+
+.bubble-bottom-right {
+    background-image: url('../img/bubble-bottom.png');
+    padding: 0 2em 0 3em;
+    bottom:  -3.2em;
+    right:  -2em;
+}
+
+.bubble p {
+    color: $color-contrast-text;
+    padding:  1em;
+}
+
+.room-3 .bubble-bottom-right {
+    padding: 0 3em 0 3em;
+    bottom:  -0.9em;
+}
+
+// -------------------------------- room styles
+
+.scope {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.scope-back {
+    z-index: 0;
 }
 
 .room {
@@ -116,6 +257,9 @@ img {
     z-index: 1;
 }
 
+
+// -------------------------------- sky
+
 .sky {
     position: absolute;
     top: 0;
@@ -124,24 +268,35 @@ img {
     z-index: 0;
 }
 
+// -------------------------------- baron
+
 .baron {
-    position: absolute;
-    z-index: 3;
+    float: right;
+    z-index: 4;
     width: 10%;
 }
 
-.baron-0 {
-    top: -3em;
-    right: 10em;
+.room .baron {
+    margin-top: -1em;
+    margin-right: 10em;
 }
 
-.baron-2 {
-    top: -19em;
-    right: 10em;
+.room-3 .baron, .room-5 .baron {
+    width:  12%;
+    margin-right: 13em;
+    margin-top: -6em;
 }
 
+.room-6 .baron {
+    margin-top: -10em;
+}
+
+.room-7 .baron {
+    margin-top: -6em;
+}
 
 // ------------------------------------  iphone
+
 @media screen and (max-width: 600px)  {
 
 }
