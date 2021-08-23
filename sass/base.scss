@@ -85,6 +85,43 @@ img {
     overflow: hidden;
     width: 100%;
 }
+
+.spread {
+    width:  100%;
+    background-color: #fff;
+    overflow: hidden;
+    padding-bottom:  5em;
+    position: relative;
+}
+
+.spread-clip {
+    width:  100%;
+    overflow:  hidden;
+    z-index: 5;
+}
+
+.spread .text-group {
+    display:  block;
+    overflow:  hidden;
+    position:  relative;
+    z-index: 6;
+}
+
+// -------------------------------- cover
+
+.cover {
+/*    background-image: url("../img/cover.png");
+    background-size: 70%;
+    background-position: top left;
+    background-repeat: no-repeat;*/
+    /*background-color: #398125;*/
+    padding: 10em 1em;
+}
+
+.cover img {
+    width:  70%;
+    margin: 0 auto;
+}
  
 // -------------------------------- white fill for room 1
 
@@ -146,7 +183,7 @@ img {
     height: 10%;
     background-color: #fff;
     overflow: hidden;
-    padding: 12em 2em;
+    padding: 6em 2em;
 }
 
 .image-group {
@@ -163,25 +200,35 @@ img {
 
 .gray-cell {
     width: 50%;
+    position: relative;
 }
 
-.gray-cell img {
-    float: none;
-    width: 80%;
-    float: none;
+
+.gray-cell img:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.frame-set .gray-cell img:nth-child(2) {
+    top: -5em;
+}
+
+.cell-image {
+    position: relative;
     margin: 0 auto;
+    width:  80%;
 }
 
 .text-group p {
-    width:  45%;
+    width:  50%;
     float:  left;
-    padding-left: 3em;
+    padding-left: 2em;
 }
 
 .text-group p:nth-child(2) {
     float:  right;
     padding-right: 1em;
-    padding-left: 1em;
 }
 
 // -------------------------------- text bubble
@@ -203,7 +250,7 @@ img {
 
 .bubble-bottom-left {
     background-image: url('../img/bubble-bottom.png');
-    padding: 0 2em 0 3em;
+    padding: 0em 4em 0 3em;
     bottom:  -0.2em;
     left:  -2em;
 }
@@ -230,6 +277,11 @@ img {
 .room-3 .bubble-bottom-right {
     padding: 0 3em 0 3em;
     bottom:  -0.9em;
+}
+
+.room-7 .bubble-bottom-right {
+    padding: 0 3em 0 3em;
+    bottom:  1.1em;
 }
 
 // -------------------------------- room styles
@@ -281,7 +333,13 @@ img {
     margin-right: 10em;
 }
 
-.room-3 .baron, .room-5 .baron {
+.room-3 .baron {
+    width:  12%;
+    margin-right: 13em;
+    margin-top: -1em;
+}
+
+.room-5 .baron {
     width:  12%;
     margin-right: 13em;
     margin-top: -6em;
@@ -292,7 +350,7 @@ img {
 }
 
 .room-7 .baron {
-    margin-top: -6em;
+    margin-top: -2em;
 }
 
 // ------------------------------------  iphone
