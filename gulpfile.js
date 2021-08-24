@@ -6,12 +6,26 @@ const concat = require('gulp-concat');
 const merge = require('merge-stream');
 const log = require('gulplog');
 
-const browserify = require('browserify');
-const source = require('vinyl-source-stream');
-const babelify = require('babelify');
-const uglify = require('gulp-uglify');
+const rollup = require('gulp-better-rollup');
+const babel = require('rollup-plugin-babel');
+const resolve = require('rollup-plugin-node-resolve');
+const commonjs = require('rollup-plugin-commonjs');
 
 const sass = require('gulp-sass')(require('sass'));
+
+const image = require('gulp-image')
+
+
+/** -------------------------------------------------------- 
+ * Compress image
+*/
+
+
+function min() {
+	return src('img/*')
+    .pipe(image())
+    .pipe(dest('deploy/img/'));
+}
 
 
 /** -------------------------------------------------------- 
@@ -34,19 +48,11 @@ function styles() {
 */
 
 function scripts() {
-	var options = {
-		entries: ['js/index.js'],
-  		debug: true,
-  		transform: ['babelify'],
-	};
-
-	console.log("browserify...")
-	return browserify(options)
-		.bundle()
-		.on('error', log.error.bind(log, 'Browserify Error'))
-		.pipe(source('bundle.js'))
-		.pipe(dest('deploy/'));
+	return src('js/*.js')
+		.pipe(rollup({ plugins: [babel(), resolve(), commonjs()] }, 'umd'))
+    	.pipe(dest('deploy/js'));
 }
+
 
 /** -------------------------------------------------------- 
  * who watches the watcher
@@ -62,4 +68,5 @@ function watcher() {
 /** -------------------------------------------------------- public tasks
 */
 
+exports.min = min;
 exports.default = watcher;

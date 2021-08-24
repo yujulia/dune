@@ -488,7 +488,8 @@
 
 	function onLoad() {
 	  var rellax$1 = new rellax('.rellax', {
-	    center: true
+	    center: true,
+	    breakpoints: [576, 768, 1201]
 	  });
 	}
 

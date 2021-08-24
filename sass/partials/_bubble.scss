@@ -6,35 +6,36 @@
 }
 
 .bubble-top-left {
-    background-image: url('../img/bubble-top.png');
-    top: -10%;
+    background-image: url('img/bubble-top.png');
+    top: -16%;
     left: -2%;
 }
 
 .bubble-bottom-left {
-    background-image: url('../img/bubble-bottom.png');
-    padding: 0em 4em 0 3em;
-    bottom:  -0.2em;
-    left:  -2em;
+    background-image: url('img/bubble-bottom.png');
+    padding: 0 30px;
+    bottom:  0;
+    left:  -2%;
 }
 
 .bubble-top-right {
-    background-image: url('../img/bubble-top.png');
+    background-image: url('img/bubble-top.png');
     padding: 1em 2em 4em 3em;
     top: -1.4em;
     right: -1.6em;
 }
 
 .bubble-bottom-right {
-    background-image: url('../img/bubble-bottom.png');
-    /*padding: 0 2em 0 3em;*/
-    bottom:  20%;
+    background-image: url('img/bubble-bottom.png');
+    padding:  0 20px 10px 20px;
+    bottom:  -2%;
     right:  -2%;
 }
 
 .bubble p {
     color: $color-contrast-text;
-    padding: 20px 40px;
+    padding: 33px 60px;
+    font-size: 1.4em;
 }
 
 // ------------------------------------  iphone
@@ -42,6 +43,11 @@
 /*@media screen and (max-width: 600px)  {*/
 @media screen and (max-width: 900px)  {
     .bubble p {
-        font-size: 0.5em;
+        font-size: 0.8em;
+        padding: 10px;
     }
+
+/*    .bubble-bottom-right, .bubble-bottom-left, .bubble-top-right, .bubble-top-left {
+        padding: 10px;
+    }*/
 }
