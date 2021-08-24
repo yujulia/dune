@@ -114,6 +114,14 @@ img {
     content: "3";
 }
 
+.social li {
+    font-size: 1em;
+    display: inline-block;
+    color:  #fff;
+    padding-right: 0.5em;
+    font-weight: lighter;
+}
+
 
 // -------------------------------- generic
 
@@ -166,14 +174,6 @@ h1 span {
     overflow: hidden;
 }
 
-.social li {
-    font-size: 1em;
-    display: inline-block;
-    color:  #fff;
-    padding-right: 0.5em;
-    font-weight: lighter;
-}
-
 
 // -------------------------------- blurb
 
@@ -205,9 +205,11 @@ h1 span {
 .all {
     display: block;
     position: relative;
-    overflow: hidden;
     width: 100%;
+    padding-top: 10em;
 }
+
+// -------------------------------- spread
 
 .spread {
     width:  100%;
@@ -233,11 +235,6 @@ h1 span {
 // -------------------------------- cover
 
 .cover {
-/*    background-image: url("../img/cover.png");
-    background-size: 70%;
-    background-position: top left;
-    background-repeat: no-repeat;*/
-    /*background-color: #398125;*/
     padding: 10em 1em;
 }
 
@@ -247,6 +244,10 @@ h1 span {
 }
  
 // -------------------------------- white fill for room 1
+
+.room.room-0 {
+    overflow: visible;
+}
 
 .white-fill {
     background-color: #e3d44b;
@@ -475,6 +476,19 @@ h1 span {
 
 .room-7 .baron {
     margin-top: -2em;
+}
+
+// -------------------------------- footer
+
+footer {
+    padding: 2em;
+    width:  100%;
+    background-color: #398125;
+}
+
+footer p {
+    width:  70%;
+    margin:  0 auto;
 }
 
 // ------------------------------------  iphone

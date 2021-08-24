@@ -453,6 +453,14 @@ img {
   content: "3";
 }
 
+.social li {
+  font-size: 1em;
+  display: inline-block;
+  color: #fff;
+  padding-right: 0.5em;
+  font-weight: lighter;
+}
+
 body {
   color: #000;
   font-family: verdana, sans-serif;
@@ -500,14 +508,6 @@ h1 span {
   overflow: hidden;
 }
 
-.social li {
-  font-size: 1em;
-  display: inline-block;
-  color: #fff;
-  padding-right: 0.5em;
-  font-weight: lighter;
-}
-
 .blurb {
   background-color: #ea5436;
   margin: 0 0 10em 0;
@@ -534,8 +534,8 @@ h1 span {
 .all {
   display: block;
   position: relative;
-  overflow: hidden;
   width: 100%;
+  padding-top: 10em;
 }
 
 .spread {
@@ -560,17 +560,16 @@ h1 span {
 }
 
 .cover {
-  /*    background-image: url("../img/cover.png");
-      background-size: 70%;
-      background-position: top left;
-      background-repeat: no-repeat;*/
-  /*background-color: #398125;*/
   padding: 10em 1em;
 }
 
 .cover img {
   width: 70%;
   margin: 0 auto;
+}
+
+.room.room-0 {
+  overflow: visible;
 }
 
 .white-fill {
@@ -785,4 +784,15 @@ h1 span {
 
 .room-7 .baron {
   margin-top: -2em;
+}
+
+footer {
+  padding: 2em;
+  width: 100%;
+  background-color: #398125;
+}
+
+footer p {
+  width: 70%;
+  margin: 0 auto;
 }
