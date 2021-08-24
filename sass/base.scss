@@ -1,126 +1,8 @@
 @charset "UTF-8";
 
 @import "partials/vars";
-
-// -------------------------------- resets 
-
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-ol, ul {
-    @extend %nofrill;
-    list-style: none;
-}
-
-img {
-    display: block;
-    width: 100%;
-}
-
-:focus {
-    outline: none;
-    border-bottom: solid 3px $color-link;
-}
-
-// -------------------------------- fonts
-
-%beforeSocial {
-    font-family: "social_media_circledregular" !important;
-    font-style: normal !important;
-    font-weight: normal !important;
-    font-variant: normal !important;
-    text-transform: none !important;
-    speak: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    vertical-align: middle;
-    font-size: 1.2em;
-    color: #fff;
-    padding-right: 0.1em;
-}
-
-@font-face {
-    font-family: 'social_media_circledregular';
-    src: url('../fonts/social_media_circled-webfont.woff2') format('woff2'),
-         url('../social_media_circled-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-[data-icon]:before {
-  content: attr(data-icon);
-  @extend %beforeSocial;
-}
-
-[class^="cc-"]:before,
-[class*=" cc-"]:before,
-[class^="cc-"]:after,
-[class*=" cc-"]:after  {
-  @extend %beforeSocial;
-}
-
-.cc-email:before {
-  content: "k";
-}
-
-.cc-web:before {
-  content: "K";
-}
-
-.cc-github:before {
-  content: ")";
-}
-
-.cc-instagram:before {
-  content: "Q";
-}
-
-.cc-youtube:before {
-  content: "M";
-}
-
-.cc-twitter:before {
-  content: "D";
-}
-
-.cc-twitch:before {
-  content: "a";
-}
-
-.cc-patreon:before {
-  content: "A";
-}
-
-.cc-paypal:before {
-    content: "Z";
-}
-
-.cc-venmo:before {
-    content: "B";
-}
-
-.cc-amazon:before {
-    content: "T";
-}
-
-.cc-box:before {
-    content: "3";
-}
-
-.social li {
-    font-size: 1em;
-    display: inline-block;
-    color:  #fff;
-    padding-right: 0.5em;
-    font-weight: lighter;
-}
+@import "partials/reset";
+@import "partials/social";
 
 
 // -------------------------------- generic
@@ -128,7 +10,7 @@ img {
 body {
     color: $color-text;
     font-family: $font-body;
-    font-weight: $semibold;
+    font-weight: $regular;
     font-size: 1em;
     background: url(../img/sky.png) fixed;
 }
@@ -144,7 +26,7 @@ a:hover {
 
 p {
     color: $color-text;
-    font-size: 1.6vw;
+    font-size: 1em;
     font-weight: bold;
     line-height: 1.6em;
 }
@@ -161,11 +43,10 @@ header {
 
 h1 {
     font-family: $font-title;
-    color: #fff;
+    color: $color-white;
     font-size: 1em;
-    top: -50px;
     text-shadow: 2px 2px #000;
-    margin-top: 5em;
+    margin-top: 10%;
 }
 
 h1 span {
@@ -180,8 +61,7 @@ h1 span {
 
 .blurb {
     background-color: $color-bg;
-    margin: 0 0 10em 0;
-    padding: 6em 1em;
+    padding: 6em 0;
     width:  100%;
 }
 
@@ -198,321 +78,139 @@ h1 span {
     width:  80%;
     margin: 0 auto 1em auto;
     font-size: 1em;
-    line-height: 1.2em;
+    color:  $color-white;
 }
 
-// -------------------------------- all
+// -------------------------------- pairs - two col items
 
-.all {
-    display: block;
-    position: relative;
+.pair-group {
+    display: flex;
     width: 100%;
-    padding-top: 10em;
 }
 
-// -------------------------------- spread
-
-.spread {
-    width:  100%;
-    background-color: #fff;
-    overflow: hidden;
-    padding-bottom:  5em;
+.pair-item {
+    flex: 1;
+    width: 100%;
     position: relative;
+    overflow: hidden;
 }
 
-.spread-clip {
-    width:  100%;
-    overflow:  hidden;
-    z-index: 5;
+.white-wrap {
+    background: $color-white;
+    width: 100%;
+    overflow: hidden;
+    padding: 5em 0;
 }
 
-.spread .text-group {
-    display:  block;
-    overflow:  hidden;
-    position:  relative;
-    z-index: 6;
-}
-
-// -------------------------------- cover
-
-.cover {
-    padding: 10em 1em;
-}
-
-.cover img {
-    width:  70%;
+.gray-container {
+    width: 80%;
     margin: 0 auto;
-}
- 
-// -------------------------------- white fill for room 1
-
-.room.room-0 {
-    overflow: visible;
+    position: relative;
+    overflow: hidden;
+    padding: 2em 0;
 }
 
-.white-fill {
-    background-color: #e3d44b;
-    width: 50%;
-    height:  100%;
+.gray-image {
+    width: 99%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.gray-image-overlay {
     position: absolute;
-    top: 0;
+    top: -110%;
     left: 0;
-    z-index: 4;
+    width: 100%;
 }
 
-.white-fill p {
-    margin: 0 auto;
-    display: block;
-    padding: 8em 0 0 5em;
+.gray-text {
+    position: relative;
+    width: 80%;
+    margin: 5% auto 0 auto;
+    font-size: 1.5vw;
+}
+
+// -------------------------------- special first text item
+
+.pair-intro {
+    background-color: #ffcc00;
+}
+
+.pair-intro p {
+    margin: 20% 0 0 20%;
     font-size: 2vw;
 }
 
-// -------------------------------- moon styles
+// -------------------------------- scope
+
+.scope {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+// -------------------------------- room
+
+.room-img {
+    z-index: 2;
+    position: relative;
+}
+
+// -------------------------------- moon
 
 .moon {
     position: absolute;
-    width: 8%;
-    z-index: 1;
-    top: 12em;
-    right: 20em;
-}
-
-.room-2 .moon {
-    top: 6em;
-}
-
-.room-3 .moon {
-    right: 28em;
-    width: 10%;
-}
-
-.room-5 .moon {
-    top: 6em;
-    right: 32em;
-    width: 12%;
-}
-
-.room-6 .moon {
-    top: 1em;
-    right: 25em;
-}
-
-.room-7 .moon {
-    top: 5em;
-    right: 20em;
-}
-
-// -------------------------------- white bg styles
-
-.white-bg {
-    height: 10%;
-    background-color: #fff;
-    overflow: hidden;
-    padding: 0em 2em 5em 2em;
-}
-
-.image-group {
-    padding-top: 5em;
-    overflow: hidden;
-}
-
-.image-group .left {
-    float:  left;
-}
-
-.image-group .right {
-    float:  right;
-}
-
-.gray-cell {
-    width: 50%;
-    position: relative;
-}
-
-
-.gray-cell img:nth-child(2) {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.frame-set .gray-cell img:nth-child(2) {
-    top: -5em;
-}
-
-.cell-image {
-    position: relative;
-    margin: 0 auto;
-    width:  80%;
-}
-
-.text-group p {
-    width:  50%;
-    float:  left;
-    padding-left: 2em;
-}
-
-.text-group p:nth-child(2) {
-    float:  right;
-    padding-right: 1em;
-}
-
-// -------------------------------- text bubble
-
-.bubble {
-    position:  absolute;
-    z-index: 5;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    
-}
-
-.bubble-top-left {
-    background-image: url('../img/bubble-top.png');
-    padding: 1em 3em 4em 5em;
-    top: -1.4em;
-    left: -1.6em;
-}
-
-.bubble-bottom-left {
-    background-image: url('../img/bubble-bottom.png');
-    padding: 0em 4em 0 3em;
-    bottom:  -0.2em;
-    left:  -2em;
-}
-
-.bubble-top-right {
-    background-image: url('../img/bubble-top.png');
-    padding: 1em 2em 4em 3em;
-    top: -1.4em;
-    right: -1.6em;
-}
-
-.bubble-bottom-right {
-    background-image: url('../img/bubble-bottom.png');
-    padding: 0 2em 0 3em;
-    bottom:  -3.2em;
-    right:  -2em;
-}
-
-.bubble p {
-    color: $color-contrast-text;
-    padding:  1em;
-}
-
-.room-3 .bubble-bottom-right {
-    padding: 0 3em 0 3em;
-    bottom:  -0.9em;
-}
-
-.room-7 .bubble-bottom-right {
-    padding: 0 3em 5em 3em;
-    bottom:  -5.1em;
-}
-
-// -------------------------------- room styles
-
-.scope {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    z-index: 3;
-}
-
-.scope-back {
-    z-index: 0;
-}
-
-.room {
-    position: relative;
-    overflow: hidden;
-}
-
-.room-top {
-    position: relative;
+    top: 45%;
+    right: 45%;
     z-index: 1;
 }
 
-
-// -------------------------------- sky
-
-.sky {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 0;
+.moon-sm {
+    width: 15%;
 }
 
 // -------------------------------- baron
 
 .baron {
-    float: right;
-    z-index: 4;
-    width: 10%;
-}
-
-.room .baron {
-    margin-top: -1em;
-    margin-right: 10em;
-}
-
-.room-3 .baron {
-    width:  12%;
-    margin-right: 13em;
-    margin-top: -1em;
-}
-
-.room-5 .baron {
-    width:  12%;
-    margin-right: 13em;
-    margin-top: -6em;
-}
-
-.room-6 .baron {
-    margin-top: -10em;
-}
-
-.room-7 .baron {
-    margin-top: -2em;
-}
-
-// -------------------------------- footer
-
-footer {
-    padding: 10em 0;
-    width:  100%;
-    background-color: #398125;
-}
-
-footer p {
-    width:  80%;
-    margin:  0 auto 1em auto;
-    color:  #e3d44b;
-    font-size: 1em;
-    font-weight: lighter;
-}
-
-footer img {
-    width:  80%;
-    margin:  5em auto 5em auto;
-}
-
-footer a:hover {
-    font-weight: bold;
-}
-
-footer .emphasis {
-    margin-bottom:  2em;
-    font-size: 2em;
-    font-weight: bold;
-    text-shadow: 2px 2px #000;
+    width: 20%;
+    position: absolute;
+    top: -5%;
+    right: 20%;
+    z-index: 3;
 }
 
 // ------------------------------------  iphone
 
-@media screen and (max-width: 600px)  {
+/*@media screen and (max-width: 600px)  {*/
+@media screen and (max-width: 900px)  {
+    .pair-group {
+        display: block;
+    }
 
+    .pair-intro {
+        background-color: $color-white;
+        overflow: hidden;
+    }
+
+    .pair-intro p {
+        font-size: 1.4em;
+        width: 80%;
+        margin: 20% auto;
+    }
+
+    .moon {
+        top: 55%;
+    }
+
+    .gray-text {
+        font-size: 1.2em;
+    }
+}
+
+.placeholder {
+    width: 100%;
+    height: 200em;
 }

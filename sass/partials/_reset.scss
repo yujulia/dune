@@ -1,0 +1,22 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+ol, ul {
+    @extend %nofrill;
+    list-style: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+:focus {
+    outline: none;
+    border-bottom: solid 3px $color-link;
+}
