@@ -162,9 +162,10 @@ header {
 h1 {
     font-family: $font-title;
     color: #fff;
-    font-size: 1.4vw;
+    font-size: 1em;
     top: -50px;
     text-shadow: 2px 2px #000;
+    margin-top: 5em;
 }
 
 h1 span {
@@ -188,7 +189,7 @@ h1 span {
     color: $color-header;
     width:  80%;
     margin: 0 auto 2em auto;
-    font-size: 2vw;
+    font-size: 1.6em;
     line-height: 1.6em;
     text-shadow: 2px 2px #000;
 }
@@ -196,8 +197,8 @@ h1 span {
 .blurb p {
     width:  80%;
     margin: 0 auto 1em auto;
-    font-size: 1.2vw;
-    line-height: 1.6em;
+    font-size: 1em;
+    line-height: 1.2em;
 }
 
 // -------------------------------- all
@@ -405,8 +406,8 @@ h1 span {
 }
 
 .room-7 .bubble-bottom-right {
-    padding: 0 3em 0 3em;
-    bottom:  1.1em;
+    padding: 0 3em 5em 3em;
+    bottom:  -5.1em;
 }
 
 // -------------------------------- room styles
@@ -481,14 +482,33 @@ h1 span {
 // -------------------------------- footer
 
 footer {
-    padding: 2em;
+    padding: 10em 0;
     width:  100%;
     background-color: #398125;
 }
 
 footer p {
-    width:  70%;
-    margin:  0 auto;
+    width:  80%;
+    margin:  0 auto 1em auto;
+    color:  #e3d44b;
+    font-size: 1em;
+    font-weight: lighter;
+}
+
+footer img {
+    width:  80%;
+    margin:  5em auto 5em auto;
+}
+
+footer a:hover {
+    font-weight: bold;
+}
+
+footer .emphasis {
+    margin-bottom:  2em;
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 2px 2px #000;
 }
 
 // ------------------------------------  iphone
