@@ -1,0 +1,47 @@
+.bubble {
+    position:  absolute;
+    z-index: 5;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.bubble-top-left {
+    background-image: url('../img/bubble-top.png');
+    top: -10%;
+    left: -2%;
+}
+
+.bubble-bottom-left {
+    background-image: url('../img/bubble-bottom.png');
+    padding: 0em 4em 0 3em;
+    bottom:  -0.2em;
+    left:  -2em;
+}
+
+.bubble-top-right {
+    background-image: url('../img/bubble-top.png');
+    padding: 1em 2em 4em 3em;
+    top: -1.4em;
+    right: -1.6em;
+}
+
+.bubble-bottom-right {
+    background-image: url('../img/bubble-bottom.png');
+    /*padding: 0 2em 0 3em;*/
+    bottom:  20%;
+    right:  -2%;
+}
+
+.bubble p {
+    color: $color-contrast-text;
+    padding: 20px 40px;
+}
+
+// ------------------------------------  iphone
+
+/*@media screen and (max-width: 600px)  {*/
+@media screen and (max-width: 900px)  {
+    .bubble p {
+        font-size: 0.5em;
+    }
+}

@@ -461,6 +461,51 @@ img {
   font-weight: lighter;
 }
 
+.bubble {
+  position: absolute;
+  z-index: 5;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.bubble-top-left {
+  background-image: url("../img/bubble-top.png");
+  top: -10%;
+  left: -2%;
+}
+
+.bubble-bottom-left {
+  background-image: url("../img/bubble-bottom.png");
+  padding: 0em 4em 0 3em;
+  bottom: -0.2em;
+  left: -2em;
+}
+
+.bubble-top-right {
+  background-image: url("../img/bubble-top.png");
+  padding: 1em 2em 4em 3em;
+  top: -1.4em;
+  right: -1.6em;
+}
+
+.bubble-bottom-right {
+  background-image: url("../img/bubble-bottom.png");
+  /*padding: 0 2em 0 3em;*/
+  bottom: 20%;
+  right: -2%;
+}
+
+.bubble p {
+  color: #ca4a30;
+  padding: 20px 40px;
+}
+
+/*@media screen and (max-width: 600px)  {*/
+@media screen and (max-width: 900px) {
+  .bubble p {
+    font-size: 0.5em;
+  }
+}
 body {
   color: #000;
   font-family: verdana, sans-serif;
@@ -512,6 +557,7 @@ h1 span {
   background-color: #ea5436;
   padding: 6em 0;
   width: 100%;
+  overflow: hidden;
 }
 
 .blurb blockquote {
@@ -521,6 +567,7 @@ h1 span {
   font-size: 1.6em;
   line-height: 1.6em;
   text-shadow: 2px 2px #000;
+  overflow: hidden;
 }
 
 .blurb p {
@@ -528,6 +575,20 @@ h1 span {
   margin: 0 auto 1em auto;
   font-size: 1em;
   color: #fff;
+  overflow: hidden;
+}
+
+.room {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.room-img {
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .pair-group {
@@ -565,7 +626,7 @@ h1 span {
 
 .gray-image-overlay {
   position: absolute;
-  top: -110%;
+  top: -100%;
   left: 0;
   width: 100%;
 }
@@ -595,14 +656,9 @@ h1 span {
   left: 0;
 }
 
-.room-img {
-  z-index: 2;
-  position: relative;
-}
-
 .moon {
   position: absolute;
-  top: 45%;
+  top: 25%;
   right: 45%;
   z-index: 1;
 }
