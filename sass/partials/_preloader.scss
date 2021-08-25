@@ -1,0 +1,118 @@
+// -------------------------------- preload sky bg
+
+#sky {
+    background: url(img/sky.png) fixed;
+    background-color: #12547c;
+    position:  absolute;
+    top: 0;
+    left: 0;
+    width:  100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0;
+    -moz-transition: opacity 1.5s;
+    -webkit-transition: opacity 1.5s;
+    -o-transition: opacity 1.5s;
+    transition: opacity 1.5s;
+}
+
+.skyLoaded #sky {
+    opacity: 1;
+}
+
+// -------------------------------- loaded content
+
+.loaded {
+    background: url(img/sky.png) fixed;
+    background-color: #12547c;
+}
+
+.loaded .content {
+    display: block;
+}
+
+.content {
+    display: none
+}
+
+// -------------------------------- preloader
+
+#preloader {
+    padding-top: 5%;
+    text-align: center;
+}
+
+#preloader h1 {
+    margin: 0;
+}
+
+#preloader address {
+    color:  $color-header;
+    font-style: normal;
+    margin-top: 1em;
+}
+
+.loadingio-spinner-interwind-ttzsdmfwmyi {
+    display: block;
+    margin: 0 auto;
+}
+
+#preloader p {
+    color: #fff;
+    text-align: center;
+    font-weight: $light
+}
+
+// ----------------------- fade in title
+
+#title {
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+// ----------------------- pulsating text on preloader
+
+.pulsate {
+    -webkit-animation: pulsate 2s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.5;
+}
+
+
+@-webkit-keyframes pulsate {
+    0% { 
+        opacity: 0.5;
+    }
+    50% { 
+        opacity: 1.0;
+    }
+    100% { 
+        opacity: 0.5;
+    }
+}

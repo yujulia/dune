@@ -4,8 +4,9 @@ import prefetchImages from 'prefetch-image';
 // ---------------------------------- generate images to load
 const imagePath = "deploy/img/";
 
+let skySource = imagePath + "sky.png";
+
 let singles = [
-  'sky',
   'baron-dark',
   'baron',
   'bubble-bottom',
@@ -29,7 +30,7 @@ let pairs = [
   'twomoons',
   'water',
   'witch',
-].flatMap((e) => [ imagePath + "fore-" + e + ".png", imagePath + "back-" + e + ".png"])
+].flatMap((e) => [ imagePath + "fore-" + e + ".png", imagePath + "back-" + e + ".png"]);
 
 let rooms = Array.from({length: 8}, (_, index) => imagePath + "room-" + index + ".png");
 
@@ -50,19 +51,28 @@ function preload() {
 
 	prefetchImages(images)
 	  .then(() => {
-	    console.log('all images loaded!');
-
-	    document.body.classList.add("stars")
+	    document.body.classList.add("loaded")
 	    document.getElementById("preloader").remove()
+	    document.getElementById("sky").remove()
 	    
 	    initializeParallax();
+	}); 
+}
+
+function loadSky() {
+		prefetchImages([skySource])
+	  .then(() => {
+	    document.body.classList.add("skyLoaded")
+
+	    // setTimeout(function() { preload(); }, 5000);
+	    preload(); 
 	}); 
 }
 
 // ---------------------------------- on load
 
 function onLoad() { 
-	preload(); 
+	loadSky();
 }
 
 document.addEventListener("DOMContentLoaded", onLoad);

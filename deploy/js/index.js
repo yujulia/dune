@@ -950,7 +950,8 @@
 	var prefetchImages = unwrapExports(prefetchImage);
 
 	const imagePath = "deploy/img/";
-	let singles = ['sky', 'baron-dark', 'baron', 'bubble-bottom', 'bubble-top', 'goldenpath', 'moon'].map(function (e) {
+	let skySource = imagePath + "sky.png";
+	let singles = ['baron-dark', 'baron', 'bubble-bottom', 'bubble-top', 'goldenpath', 'moon'].map(function (e) {
 	  return imagePath + e + ".png";
 	});
 	let pairs = ['arrakis', 'dune', 'fedaykin', 'fireplace', 'gomjabbar', 'keep', 'muaddib', 'sardaukar', 'shaihulud', 'twomoons', 'water', 'witch'].flatMap(e => [imagePath + "fore-" + e + ".png", imagePath + "back-" + e + ".png"]);
@@ -969,16 +970,24 @@
 	function preload() {
 	  var images = [].concat(singles, pairs, rooms);
 	  prefetchImages(images).then(() => {
-	    console.log('all images loaded!');
-	    document.body.classList.add("stars");
+	    document.body.classList.add("loaded");
 	    document.getElementById("preloader").remove();
+	    document.getElementById("sky").remove();
 	    initializeParallax();
+	  });
+	}
+
+	function loadSky() {
+	  prefetchImages([skySource]).then(() => {
+	    document.body.classList.add("skyLoaded"); // setTimeout(function() { preload(); }, 5000);
+
+	    preload();
 	  });
 	} // ---------------------------------- on load
 
 
 	function onLoad() {
-	  preload();
+	  loadSky();
 	}
 
 	document.addEventListener("DOMContentLoaded", onLoad);
