@@ -26,6 +26,7 @@
     "log": "^6.0.0",
     "merge-stream": "^2.0.0",
     "normalize.css": "^8.0.1",
+    "prefetch-image": "^1.1.1",
     "rellax": "^1.12.1",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",

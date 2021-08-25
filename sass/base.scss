@@ -2,8 +2,8 @@
 
 @import "partials/vars";
 @import "partials/reset";
-@import "partials/social";
 @import "partials/bubble";
+@import "partials/loader";
 
 
 // -------------------------------- generic
@@ -13,7 +13,6 @@ body {
     font-family: $font-body;
     font-weight: $regular;
     font-size: 1em;
-    background: url(img/sky.png) fixed;
     background-color: #12547c;
 }
 
@@ -32,6 +31,64 @@ p {
     font-size: 1em;
     font-weight: bold;
     line-height: 1.6em;
+}
+
+.content {
+    display: none
+}
+
+.stars {
+    background: url(img/sky.png) fixed;
+}
+
+.stars .content {
+    display: block;
+}
+
+// -------------------------------- preloader
+
+#preloader {
+    padding-top: 5%;
+    text-align: center;
+}
+
+#preloader h1 {
+    margin: 0;
+}
+
+#preloader address {
+    color:  $color-header;
+    font-style: normal;
+    margin-top: 1em;
+}
+
+.loadingio-spinner-interwind-ttzsdmfwmyi {
+    display: block;
+    margin: 0 auto;
+}
+
+#preloader p {
+    color: #fff;
+    text-align: center;
+    font-weight: $light
+}
+
+.pulsate {
+    -webkit-animation: pulsate 2s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.5;
+}
+
+@-webkit-keyframes pulsate {
+    0% { 
+        opacity: 0.5;
+    }
+    50% { 
+        opacity: 1.0;
+    }
+    100% { 
+        opacity: 0.5;
+    }
 }
 
 // -------------------------------- header
