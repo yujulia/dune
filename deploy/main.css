@@ -413,19 +413,32 @@ img {
 .bubble p {
   color: #ca4a30;
   padding: 33px 60px;
-  font-size: 1.4em;
+  font-size: 1.4vw;
 }
 
-/*@media screen and (max-width: 600px)  {*/
 @media screen and (max-width: 900px) {
   .bubble p {
     font-size: 0.8em;
+    padding: 1.6em 2em;
+  }
+
+  .bubble {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .bubble p {
+    font-size: 1em;
     padding: 10px;
   }
 
-  /*    .bubble-bottom-right, .bubble-bottom-left, .bubble-top-right, .bubble-top-left {
-          padding: 10px;
-      }*/
+  .bubble {
+    padding: 2% 5%;
+  }
+
+  .bubble-top-right {
+    padding: 2% 7%;
+  }
 }
 @keyframes ldio-htw1mb4e25h-r {
   0%, 100% {
@@ -815,6 +828,7 @@ h1 address {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 2;
 }
 
 .single .pair-item p {
@@ -825,6 +839,8 @@ h1 address {
 
 .single .pair-group {
   padding-bottom: 5%;
+  position: relative;
+  z-index: 2;
 }
 
 .moon {
@@ -891,6 +907,10 @@ h1 address {
   bottom: -8%;
 }
 
+.room-3 .bubble p {
+  padding: 26px 60px;
+}
+
 footer {
   padding: 10em 0;
   width: 100%;
@@ -922,10 +942,57 @@ footer .emphasis {
   text-shadow: 2px 2px #000;
 }
 
+.mobile-room {
+  display: none;
+}
+
 @media screen and (max-width: 900px) {
+  .gray-text {
+    font-size: 0.9em;
+  }
+}
+@media screen and (max-width: 500px) {
   h1 {
     margin-top: 5em;
     font-size: 1.2em;
+  }
+
+  .box.pair-item {
+    padding: 10% 0;
+  }
+
+  .box:nth-child(2) {
+    background-color: #eee;
+  }
+
+  .painting .box:nth-child(2) {
+    background-color: #fff;
+  }
+
+  .painting .box.pair-item {
+    padding: 0;
+  }
+
+  .room {
+    display: none;
+  }
+
+  .mobile-room {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .mobile-room .moon {
+    top: 26%;
+    right: 45%;
+    width: 17%;
+  }
+
+  .painting.box.pair-item {
+    padding: 0;
   }
 
   .pair-group {
@@ -945,19 +1012,11 @@ footer .emphasis {
 
   .gray-text {
     font-size: 1.2em;
+    z-index: 3;
   }
 
   .white-wrap {
-    padding: 10% 0;
-  }
-
-  .painting .frame {
-    top: -40%;
-  }
-
-  .room-half .moon {
-    top: 20%;
-    right: 46%;
+    padding: 0;
   }
 
   .moon {
@@ -965,7 +1024,69 @@ footer .emphasis {
     right: 23%;
   }
 
+  .painting .frame {
+    top: -40%;
+  }
+
+  .painting .gray-text {
+    top: -15%;
+  }
+
+  .room-half .moon {
+    top: 20%;
+    right: 46%;
+  }
+
+  .room-3-1 .moon {
+    top: 26%;
+    right: 66%;
+    width: 25%;
+  }
+
+  .room-3-0 .baron {
+    width: 26%;
+  }
+
+  .room-3-0 .bubble {
+    padding: 0% 5%;
+  }
+
+  .room-3-1 .baron {
+    width: 26%;
+    right: 36%;
+    top: -13%;
+  }
+
+  .room-3-1 .bubble {
+    padding: 1% 8%;
+  }
+
+  .room-4-1 .bubble {
+    padding: 5% 6%;
+    bottom: 0%;
+  }
+
+  .room-6-0 .bubble {
+    padding: 3% 6% 11%;
+    bottom: -13%;
+  }
+
+  .arrakis-0, .arrakis-1 {
+    background-color: #fff;
+    padding-bottom: 10%;
+  }
+
   .room-7 .bubble-bottom-right, .room-6 .bubble-bottom-left, .rooom-5 .bubble-top-right {
     padding: 10px;
+  }
+
+  .room-7-0 .bubble {
+    padding: 11% 7% 5%;
+  }
+
+  .room-7-1 .baron {
+    width: 17%;
+    top: -7%;
+    right: 23%;
   }
 }

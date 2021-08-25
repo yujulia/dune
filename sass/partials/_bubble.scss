@@ -35,19 +35,34 @@
 .bubble p {
     color: $color-contrast-text;
     padding: 33px 60px;
-    font-size: 1.4em;
+    font-size: 1.4vw;
 }
 
 // ------------------------------------  iphone
 
-/*@media screen and (max-width: 600px)  {*/
 @media screen and (max-width: 900px)  {
     .bubble p {
         font-size: 0.8em;
+        padding: 1.6em 2em;
+    }
+
+    .bubble {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 500px)  {
+    .bubble p {
+        font-size: 1em;
         padding: 10px;
     }
 
-/*    .bubble-bottom-right, .bubble-bottom-left, .bubble-top-right, .bubble-top-left {
-        padding: 10px;
-    }*/
+    .bubble {
+        padding: 2% 5%;
+    }
+
+    .bubble-top-right {
+        padding: 2% 7%;
+    }
+
 }
