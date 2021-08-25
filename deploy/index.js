@@ -949,7 +949,7 @@
 
 	var prefetchImages = unwrapExports(prefetchImage);
 
-	const imagePath = "deploy/img/";
+	const imagePath = "img/";
 	let skySource = imagePath + "sky.png";
 	let singles = ['baron-dark', 'baron', 'bubble-bottom', 'bubble-top', 'goldenpath', 'moon', 'title', 'title-black'].map(function (e) {
 	  return imagePath + e + ".png";
@@ -978,7 +978,6 @@
 
 	function preload() {
 	  var images = [].concat(singles, pairs, rooms, roomsMobile1, roomsMobile2, roomsMobile3);
-	  console.log("images", images);
 	  prefetchImages(images).then(() => {
 	    document.body.classList.add("loaded");
 	    document.getElementById("preloader").remove();
@@ -989,8 +988,7 @@
 
 	function loadSky() {
 	  prefetchImages([skySource]).then(() => {
-	    document.body.classList.add("skyLoaded"); // setTimeout(function() { preload(); }, 5000);
-
+	    document.body.classList.add("skyLoaded");
 	    preload();
 	  });
 	} // ---------------------------------- on load

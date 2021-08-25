@@ -50,7 +50,7 @@ function styles() {
 function scripts() {
 	return src('js/*.js')
 		.pipe(rollup({ plugins: [babel(), resolve(), commonjs()] }, 'umd'))
-    	.pipe(dest('deploy/js'));
+    	.pipe(dest('deploy/'));
 }
 
 

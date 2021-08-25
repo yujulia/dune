@@ -2,7 +2,7 @@ import Rellax from 'Rellax';
 import prefetchImages from 'prefetch-image';
 
 // ---------------------------------- generate images to load
-const imagePath = "deploy/img/";
+const imagePath = "img/";
 
 let skySource = imagePath + "sky.png";
 
@@ -67,9 +67,6 @@ function initializeParallax() {
 
 function preload() {
 	var images = [].concat(singles, pairs, rooms, roomsMobile1, roomsMobile2, roomsMobile3);
-
-	console.log("images", images);
-
 	prefetchImages(images)
 	  .then(() => {
 	    document.body.classList.add("loaded")
@@ -84,8 +81,6 @@ function loadSky() {
 		prefetchImages([skySource])
 	  .then(() => {
 	    document.body.classList.add("skyLoaded")
-
-	    // setTimeout(function() { preload(); }, 5000);
 	    preload(); 
 	}); 
 }
