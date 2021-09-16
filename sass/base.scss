@@ -165,8 +165,9 @@ h1 address {
 }
 
 .painting .gray-text {
-    margin-bottom: 10%;
-    top: -18%;
+    position: absolute;
+    bottom: 12%;
+    width: 100%;
 }
 
 .painting .frame {
@@ -325,12 +326,9 @@ footer .emphasis {
     display: none;
 }
 
-// ------------------------------------  media sizing
+// ------------------------------------  ipad sizing
 
-@media screen and (max-width: 900px)  {
-    .gray-text {
-        font-size: 0.9em;
-    }
+@media screen and (max-width: 991.98px) {
 
     h1 {
         margin: 12% 0 0 0;
@@ -381,7 +379,9 @@ footer .emphasis {
     }
 }
 
-@media screen and (max-width: 500px)  {
+// ------------------------------------  phone sizing
+
+@media only screen and (max-width: 575.98px)  {
     h1 {
         margin-top: 5em;
         font-size:  1.2em;
@@ -391,8 +391,13 @@ footer .emphasis {
         padding: 10% 0;
     }
 
+
     .box:nth-child(2) {
         background-color: #eee;
+    }
+
+    .painting.white-wrap {
+        padding-bottom: 15%;
     }
 
     .painting .box:nth-child(2) {
@@ -401,6 +406,11 @@ footer .emphasis {
 
     .painting .box.pair-item {
         padding: 0;
+    }
+
+    .painting .gray-text {
+        bottom: 0;
+        font-size: 0.9em;
     }
 
     .room {
@@ -434,14 +444,14 @@ footer .emphasis {
         overflow: hidden;
     }
 
-    .pair-intro p {
-        font-size: 1.4em;
+    .pair-group .pair-intro p {
+        font-size: 1em;
         width: 80%;
         margin: 20% auto;
     }
 
     .gray-text {
-        font-size: 1.2em;
+        font-size: 1em;
         z-index: 3;
     }
 
@@ -460,13 +470,21 @@ footer .emphasis {
         top: -40%;
     }
 
-    .painting .gray-text {
-        top: -15%;
-    }
-
     .room-half .moon {
         top: 20%;
         right: 46%;
+    }
+
+    .room-1-0 .bubble {
+        top: -42%;
+    }
+
+    .room-1-1 .bubble {
+        top: -20%;
+    }
+
+    .room-2-0 .bubble {
+        top: -42%;
     }
 
     .room-3-1 .moon {
@@ -481,6 +499,7 @@ footer .emphasis {
 
     .room-3-0 .bubble {
         padding: 0% 5%;
+        bottom: 10%;
     }
 
     .room-3-1 .baron {
@@ -491,26 +510,30 @@ footer .emphasis {
 
     .room-3-1 .bubble {
         padding: 1% 8%;
-        bottom: -3%;
+        bottom: 30%;
     }
 
     .room-4-0 .bubble {
         padding: 3% 6%;
-        bottom: 3%;
+        top: -12%;
     }
 
     .room-4-1 .bubble {
         padding: 5% 6%;
-        bottom: -0%;
+        bottom: -8%;
     }
 
     .room-5-0 .bubble {
-        top: -13%;
+        top: -15%;
     }
 
     .room-6-0 .bubble {
-        padding: 3% 6% 11%;
-        bottom: -13%;
+        padding: 0% 0% 0% 10%;
+        top: -6%;
+    }
+
+    .room-6-0 .bubble p {
+        padding: 5% 1% 1% 2%;
     }
 
     .arrakis-0, .arrakis-1 {
@@ -523,8 +546,8 @@ footer .emphasis {
     }
 
     .room-7-0 .bubble {
-        padding: 11% 7% 5%;
-        top: 0;
+        padding: 9% 12% 10% 12%;
+        top: -3%;
     }
 
     .room-7-1 .baron {
