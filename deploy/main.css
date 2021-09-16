@@ -705,7 +705,7 @@ h1 address {
 
 .blurb {
   background-color: #ea5436;
-  padding: 6em 0;
+  padding: 10em 0 6em 0;
   width: 100%;
   overflow: hidden;
 }
@@ -945,6 +945,74 @@ footer .emphasis {
 
 .mobile-room {
   display: none;
+}
+
+.buy {
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+.buy a {
+  display: block;
+}
+
+.buy p {
+  text-align: right;
+  padding: 0.5em 1em;
+  background-color: #e3d44b;
+  margin-top: 100px;
+  width: 100%;
+}
+
+#book {
+  float: right;
+  width: 230px;
+  height: 201px;
+  margin-right: 10%;
+  margin-left: 1%;
+}
+
+#buy {
+  background-color: #ca4a30;
+  padding: 5% 10%;
+  margin-bottom: 5%;
+}
+
+#buy h2 {
+  font-size: 2em;
+  margin-bottom: 5%;
+}
+
+#buy h2 span {
+  color: #e3d44b;
+}
+
+#buy h2 a:hover, #buy h2 a:visited {
+  color: #fff;
+}
+
+#buy ul {
+  overflow: hidden;
+}
+
+#buy li {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 1%;
+}
+
+#buy li a, #buy li a:hover, #buy li a:active, #buy li a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+#buy li img {
+  width: 115px;
+  height: 100px;
+  display: block;
+  float: left;
+  margin: 0 1% 0 0;
 }
 
 @media screen and (max-width: 991.98px) {

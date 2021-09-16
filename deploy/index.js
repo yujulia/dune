@@ -951,7 +951,7 @@
 
 	const imagePath = "img/";
 	let skySource = imagePath + "sky.png";
-	let singles = ['baron-dark', 'baron', 'bubble-bottom', 'bubble-top', 'goldenpath', 'moon', 'title', 'title-black'].map(function (e) {
+	let singles = ['book', 'baron-dark', 'baron', 'bubble-bottom', 'bubble-top', 'goldenpath', 'moon', 'title', 'title-black'].map(function (e) {
 	  return imagePath + e + ".png";
 	});
 	let pairs = ['arrakis', 'dune', 'fedaykin', 'fireplace', 'gomjabbar', 'keep', 'muaddib', 'sardaukar', 'shaihulud', 'twomoons', 'water', 'witch'].flatMap(e => [imagePath + "fore-" + e + ".png", imagePath + "back-" + e + ".png"]);

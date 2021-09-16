@@ -7,6 +7,7 @@ const imagePath = "img/";
 let skySource = imagePath + "sky.png";
 
 let singles = [
+	'book',
   'baron-dark',
   'baron',
   'bubble-bottom',
